@@ -1,0 +1,8 @@
+a {-webkit-tap-highlight-color: fadeout(@accent-color1, 50%) !important;}
+.dropdown {-webkit-backface-visibility: hidden;}
+.gf-menu .item.icon [class^="icon-"], .gf-menu .item.icon [class*=" icon-"] {-webkit-font-smoothing: inherit;}
+canvas {height: auto !important;}
+
+.fp-roksprocket-tabs-showcase .sprocket-tabs-desc .rt-text-large {-webkit-transform: scale3d(0.5, 0.5, 1);font-size: 70px;}
+.fp-roksprocket-tabs-showcase .sprocket-tabs-desc .rt-title-tag {-webkit-transform: scale3d(0.5, 0.5, 1);font-size: 34px;}
+.fp-roksprocket-tabs-showcase .sprocket-tabs-desc .readon {-webkit-transform: scale3d(0.5, 0.5, 1);font-size: 44px;margin-top: 0;padding: 30px 70px;}

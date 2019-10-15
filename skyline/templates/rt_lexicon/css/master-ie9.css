@@ -1,0 +1,28 @@
+/**
+* @version   $Id: master-ie9.css 19928 2014-03-24 16:30:27Z arifin $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+/* Navigation */
+body .gf-menu li.parent > .item:after {top: 100%;}
+
+/* Module Suffixes */
+body [class*="box"] [class*="box"] {filter: none !important;}
+body [class^="box"] .module-content [class*="custom"], body [class*=" box"] .module-content [class*="custom"] {filter: none;}
+
+/* Joomla Pagination */
+body .pagination ul li a {filter: none;}
+
+/* Gradient + Border Radius Fix */
+body .button, body .readon, body button.validate, body p.readmore a, body #member-profile a, body #member-registration a, body .formelm-buttons button, body .controls .btn, body .logout-button .btn, body #gantry-totop, body .sprocket-mosaic-header li, body .sprocket-readmore, body .sprocket-mosaic-loadmore, body .sprocket-lists-title .indicator, body .roksearch_results a.clr, body #k2Container .k2ReadMore, body #k2Container #submitCommentButton {filter: none !important;}
+body #rt-header .horizontal-login #modlgn-passwd, body #rt-header .horizontal-login #modlgn-username, body .rokajaxsearch .roksearch-wrapper {filter: none !important;}
+body .sprocket-features-pagination li, body .sprocket-lists-pagination li, body .sprocket-strips-pagination li {filter: none !important;}
+body .sprocket-strips .sprocket-strips-item {filter: none !important;}
+
+/* Template Stuff */
+
+/* Demo Pages */
+/* Counter */
+body #rt-comingsoon-counter .number {filter: none !important;}

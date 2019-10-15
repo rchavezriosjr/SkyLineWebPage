@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" version="2.5" method="upgrade">
+    <name>System - RokBooster</name>
+    <author>RocketTheme, LLC</author>
+    <creationDate>February 22, 2019</creationDate>
+    <copyright>(C) 2005 - 2019 RocketTheme, LLC. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>support@rockettheme.com</authorEmail>
+    <authorUrl>http://www.rockettheme.com</authorUrl>
+    <version>1.1.18</version>
+    <description>
+        <![CDATA[
+        <div class="booster-description">
+        <img src="../plugins/system/rokbooster/assets/images/rokbooster.jpg" class="img-padding" /><h1>RokBooster</h1>
+        <p>Increase the speed of your site by enabling the RokBooster plug-in.  This advanced extensions will <strong>compress</strong> and <strong>combine</strong> your <strong>CSS</strong> and <strong>JavaScript</strong> into as few files as possible each.  RokBooster can dramatically reduce the number of HTTP calls a browser has to make, and sending those compressed files GZipped means your pages will load faster with less load on your server.</p>
+
+        <h2>Key Features:</h2>
+        <ul class="features">
+            <li>Combine and compress CSS and JavaScript into as few files as possible</li>
+            <li>GZip compression used to send CSS and JavaScript files</li>
+            <li>Compress Inline CSS and JavaScript</li>
+            <li>Customizable cache timeout</li>
+            <li>Background rendering, so initial file processing won't slow your users down</li>
+            <li>Full page scan allows for non-header JavaScript and CSS to be included</li>
+            <li>Ability to ignore specific CSS and JavaScript files</li>
+        </ul>
+        <p class="note"><strong>NOTE:</strong> Clearing the Joomla cache will remove the RokBooster compressed cache files causing them to regenerate on the next page hit</p>
+        </div>
+        ]]>
+    </description>
+    <updateservers>
+        <server type="collection" priority="1" name="RocketTheme Update Directory">http://updates.rockettheme.com/joomla/updates.xml</server>
+    </updateservers>
+    <files>
+        <filename plugin="rokbooster">rokbooster.php</filename>
+        <filename>ajax.php</filename>
+        <filename>MD5SUMS</filename>
+        <folder>assets</folder>
+        <folder>fields</folder>
+        <folder>includes</folder>
+        <folder>language</folder>
+        <folder>lib</folder>
+    </files>
+
+    <config>
+        <fields name="params">
+
+            <fieldset name="core" addfieldpath="/plugins/system/rokbooster/fields">
+                <field type="init"/>
+                <field type="break" label="ROKBOOSTER_LABEL_CACHE" class="top"/>
+                <field name="cache_time" type="textplus" append="minutes" default="60"
+                       label="ROKBOOSTER_LABEL_CACHE_TIME" description="ROKBOOSTER_DESC_CACHE_TIME"/>
+                <field name="clear_cache" type="clearcache" label="ROKBOOSTER_LABEL_CLEAR_CACHE"
+                       description="ROKBOOSTER_DESC_CLEAR_CACHE"/>
+            </fieldset>
+            <fieldset name="stylesheets" addfieldpath="/plugins/system/rokbooster/fields">
+                <field type="break" label="ROKBOOSTER_LABEL_CSS"/>
+                <field name="compress_css" type="boostlist" default="compress" label="ROKBOOSTER_LABEL_MINIFY_CSS"
+                       description="ROKBOOSTER_DESC_MINIFY_CSS">
+                    <option value="disabled">JDISABLED</option>
+                    <option value="combine">ROKBOOSTER_OPTION_COMBINE_ONLY</option>
+                    <option value="compress">ROKBOOSTER_OPTION_COMBINE_AND_COMPRESS</option>
+                </field>
+                <field name="style_sort" type="boostlist" default="RokBooster_Compressor_Sort_ExternalOnTop"
+                       label="ROKBOOSTER_LABEL_SORT_METHOD"
+                       description="ROKBOOSTER_DESC_SORT_METHOD">
+                    <option value="RokBooster_Compressor_Sort_Ordered">ROKBOOSTER_SORT_ABSOLUTE_ORDERING</option>
+                    <option value="RokBooster_Compressor_Sort_ExternalOnTop">ROKBOOSTER_SORT_EXTERNALS_ON_TOP</option>
+                </field>
+                <field name="inline_css" type="boostlist" default="1" label="ROKBOOSTER_LABEL_INLINE_CSS"
+                       description="ROKBOOSTER_DESC_INLINE_CSS">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="imported_css" type="boostlist" default="1" label="ROKBOOSTER_LABEL_IMPORT_CSS"
+                       description="ROKBOOSTER_DESC_IMPORT_CSS">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                </fieldset>
+            <fieldset name="javascript" addfieldpath="/plugins/system/rokbooster/fields">
+                <field type="break" label="ROKBOOSTER_LABEL_JS"/>
+                <field name="compress_js" type="boostlist" default="combine" label="ROKBOOSTER_LABEL_MINIFY_JS"
+                       description="ROKBOOSTER_DESC_MINIFY_JS">
+                    <option value="disabled">JDISABLED</option>
+                    <option value="combine">ROKBOOSTER_OPTION_COMBINE_ONLY</option>
+                    <option value="compress">ROKBOOSTER_OPTION_COMBINE_AND_COMPRESS</option>
+                </field>
+                <field name="script_sort" type="boostlist" default="RokBooster_Compressor_Sort_ExternalOnTop"
+                       label="ROKBOOSTER_LABEL_SORT_METHOD"
+                       description="ROKBOOSTER_DESC_SORT_METHOD">
+                    <option value="RokBooster_Compressor_Sort_Ordered">ROKBOOSTER_SORT_ABSOLUTE_ORDERING</option>
+                    <option value="RokBooster_Compressor_Sort_ExternalOnTop">ROKBOOSTER_SORT_EXTERNALS_ON_TOP</option>
+                </field>
+                <field name="inline_js" type="boostlist" default="1" label="ROKBOOSTER_LABEL_INLINE_JS"
+                       description="ROKBOOSTER_DESC_INLINE_JS">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <fieldset name="images" addfieldpath="/plugins/system/rokbooster/fields">
+                <field type="break" label="ROKBOOSTER_LABEL_IMAGES"/>
+                <field name="max_data_uri_image_size" type="textplus" append="bytes" default="21612"
+                       label="ROKBOOSTER_LABEL_MAX_DATA_URI_IMAGE_SIZE"
+                       description="ROKBOOSTER_DESC_MAX_DATA_URI_IMAGE_SIZE"/>
+                <field name="convert_css_images" type="boostlist" default="1"
+                       label="ROKBOOSTER_LABEL_CONVERT_CSS_IMAGES"
+                       description="ROKBOOSTER_DESC_CONVERT_CSS_IMAGES">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="convert_page_images" type="boostlist" default="1"
+                       label="ROKBOOSTER_LABEL_CONVERT_PAGE_IMAGES"
+                       description="ROKBOOSTER_DESC_CONVERT_PAGE_IMAGES">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <fieldset name="fonts" addfieldpath="/plugins/system/rokbooster/fields">
+                <field type="break" label="ROKBOOSTER_LABEL_FONTS"/>
+                <field name="max_data_uri_font_size" type="textplus" append="bytes" default="21612"
+                       label="ROKBOOSTER_LABEL_MAX_DATA_URI_FONT_SIZE"
+                       description="ROKBOOSTER_DESC_MAX_DATA_URI_FONT_SIZE"/>
+                <field name="convert_css_fonts" type="boostlist" default="1"
+                       label="ROKBOOSTER_LABEL_CONVERT_CSS_FONTS"
+                       description="ROKBOOSTER_DESC_CONVERT_CSS_FONTS">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="advanced">
+              <field type="break" label="ROKBOOSTER_LABEL_ADVANCED"/>
+                <field name="ignored_pages" type="textarea" label="ROKBOOSTER_LABEL_IGNORED_PAGES" cols="80" rows="5"
+                       description="ROKBOOSTER_DESC_IGNORED_PAGES" default="" class="fieldbox" />
+                <field name="ignored_files" type="textarea" label="ROKBOOSTER_LABEL_IGNORED_FILES" cols="80" rows="5"
+                       description="ROKBOOSTER_DESC_IGNORED_FILES" default="/media/editors/tinymce/jscripts/tiny_mce/tiny_mce.js" class="fieldbox" />
+                <field name="scan_method" type="boostlist" default="header" label="ROKBOOSTER_LABEL_SCAN_METHOD"
+                       description="ROKBOOSTER_DESC_SCAN_METHOD">
+                    <option value="joomla">ROKBOOSTER_JOOMLA_HEADER_LISTS</option>
+                    <option value="header">ROKBOOSTER_HEADER_SCAN</option>
+                    <option value="body">ROKBOOSTER_BODY_SCAN</option>
+                </field>
+                <field name="use_background_processing" type="backgroundprocessing" default="1"
+                       label="ROKBOOSTER_LABEL_BACKGROUND"
+                       description="ROKBOOSTER_DESC_BACKGROUND">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="disable_for_ie" type="boostlist" default="2" label="ROKBOOSTER_LABEL_DISABLE_FOR_IE"
+                       description="ROKBOOSTER_DESC_DISABLE_FOR_IE">
+                    <option value="0">ROKBOOSTER_IE_NO</option>
+                    <option value="1">ROKBOOSTER_IE_ALL</option>
+                    <option value="2">ROKBOOSTER_IE_LT_10</option>
+                </field>
+                <field name="cache_file_permissions" type="boostlist" default="0644" label="ROKBOOSTER_LABEL_CACHE_FILE_PERMISSIONS"
+                       description="ROKBOOSTER_DESC_CACHE_FILE_PERMISSIONS">
+                    <option value="0664">ROKBOOSTER_FILE_GROUP_WRITEABLE</option>
+                    <option value="0644">ROKBOOSTER_FILE_USER_WRITEABLE_ONLY</option>
+                </field>
+                <field name="data_storage" type="rokboosterdatastorage" default="default" label="ROKBOOSTER_LABEL_DATA_STORAGE"
+                       description="ROKBOOSTER_DESC_DATA_STORAGE">
+                </field>
+            </fieldset>
+            <fieldset name="debug" label="PLG_SYSTEM_ROKBOOSTER_FIELD_LABEL_DEBUG"
+                      addfieldpath="/plugins/system/rokbooster/fields">
+                <field type="break" label="ROKBOOSTER_LABEL_DEBUG"/>
+                <field name="debugloglocation" type="debuglink"
+                       description="PLG_SYSTEM_ROKBOOSTER_DEBUG_LOG_LOCATION_DESC"
+                       label="PLG_SYSTEM_ROKBOOSTER_DEBUG_LOG_LOCATION_LABEL"
+                       logfile="rokbooster.php"
+                    />
+
+                <field name="debugloglevel" type="boostlist"
+                       description="PLG_SYSTEM_ROKBOOSTER_DEBUG_LOG_LEVEL_DESC"
+                       label="PLG_SYSTEM_ROKBOOSTER_DEBUG_LOG_LEVEL_LABEL"
+                       default="63"
+                    >
+                    <option value="15">PLG_SYSTEM_ROKBOOSTER_DEBUG_LOG_LEVEL_DISABLED</option>
+                    <option value="15">PLG_SYSTEM_ROKBOOSTER_DEBUG_LOG_LEVEL_ERRORS_ONLY</option>
+                    <option value="63">PLG_SYSTEM_ROKBOOSTER_DEBUG_LOG_LEVEL_NORMAL</option>
+                    <option value="30719">PLG_SYSTEM_ROKBOOSTER_DEBUG_LOG_LEVEL_DEBUG</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

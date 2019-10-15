@@ -1,0 +1,46 @@
+/* JD Visitor Style */
+
+#jdvisitor {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 6px -5px #000;
+    padding: 3px;
+    width: 99%;
+}
+
+#jdvisitor .jdvisitor-0 {
+    background-position: 0px 0px !important;
+}
+#jdvisitor .jdvisitor-1 {
+    background-position: -52px 0px !important;
+}
+#jdvisitor .jdvisitor-2 {
+    background-position: -104px 0px !important;
+}
+#jdvisitor .jdvisitor-3 {
+    background-position: -156px 0px !important;
+}
+#jdvisitor .jdvisitor-4 {
+    background-position: -208px 0px !important;
+}
+#jdvisitor .jdvisitor-5 {
+    background-position: -260px 0px !important;
+}
+#jdvisitor .jdvisitor-6 {
+    background-position: -312px 0px !important;
+}
+#jdvisitor .jdvisitor-7 {
+    background-position: -364px 0px !important;
+}
+#jdvisitor .jdvisitor-8 {
+    background-position: -416px 0px !important;
+}
+#jdvisitor .jdvisitor-9 {
+    background-position: -468px 0px !important;
+}
+#jdvisitor .jdvisitor-0, #jdvisitor .jdvisitor-1, #jdvisitor .jdvisitor-2, #jdvisitor .jdvisitor-3, #jdvisitor .jdvisitor-4, #jdvisitor .jdvisitor-5, #jdvisitor .jdvisitor-6, #jdvisitor .jdvisitor-7, #jdvisitor .jdvisitor-8, #jdvisitor .jdvisitor-9 {
+    display: inline-block;
+    height: 38px;
+    text-indent: -999em;
+    width: 26px;
+}

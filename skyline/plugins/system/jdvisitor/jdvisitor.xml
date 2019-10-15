@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="system" method="upgrade" >
+    <name>System - JD Visitor</name>
+	<author>Md. Shaon Bahadur</author>
+	<creationDate>August 2014</creationDate>
+	<copyright>Copyright (C) 2014 j-download.com, All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>tech@j-download.com</authorEmail>
+	<authorUrl>www.j-download.com</authorUrl>
+	<version>1.0.0</version>
+	<description>
+        <![CDATA[
+                <p style="text-align: left;">JD visitor detect unique ip address from client browser and stored in a database to track unique visitor in the site. No additional data are stored, just the unique ip address of visitors. JD visitor comes with 10 different themes for the front-end view. It also has option to include custom css to make it look better. JD visitor comes with a module and plugin, module is the main function to view the visitor counter and plugin helps to detect unique visitor and stored in database. There are no additional parameters at plugin. You just need to publish the plugin and then assign the module to a template location.</p>
+            ]]>
+    </description>
+    <files>
+        <filename plugin="jdvisitor">jdvisitor.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <params/>
+</extension>

@@ -1,0 +1,9 @@
+/**
+* @version   $Id: master-ie11.css 20049 2014-03-31 16:47:48Z arifin $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+/* Navigation */
+body .gf-menu.l1 > li.parent > .item:after {top: 100%;}

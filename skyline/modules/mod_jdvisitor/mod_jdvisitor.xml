@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>JD Visitor</name>
+	<author>Md. Shaon Bahadur</author>
+	<creationDate>August 2014</creationDate>
+	<copyright>Copyright (C) 2014 j-download.com, All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>tech@j-download.com</authorEmail>
+	<authorUrl>www.j-download.com</authorUrl>
+	<version>1.0.0</version>
+	<description>
+        <![CDATA[
+            <table width="95%" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td>
+              <table width="100%" cellpadding="5" cellspacing="5" border="0"><tr><td valign="top"><img src="../modules/mod_jdvisitor/tmpl/images/jdvisitor.png" border="0" /></td>
+              <td valign="top" style="padding-left:60px;">
+                <p style="text-align: left;">JD visitor detect unique ip address from client browser and stored in a database to track unique visitor in the site. No additional data are stored, just the unique ip address of visitors. JD visitor comes with 10 different themes for the front-end view. It also has option to include custom css to make it look better. JD visitor comes with a module and plugin, module is the main function to view the visitor counter and plugin helps to detect unique visitor and stored in database. There are no additional parameters at plugin. You just need to publish the plugin and then assign the module to a template location.</p>
+              </td></tr></table>
+            </td></tr>
+            </table>
+            ]]>
+    </description>
+	<files>
+		<filename module="mod_jdvisitor">mod_jdvisitor.php</filename>
+		<folder>tmpl</folder>
+        <folder>sql</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+        <filename>mod_jdvisitor.xml</filename>
+	</files>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+	 	</sql>
+	</uninstall>	
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_LOGIN" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+            <field name="themeselect" type="list" default="0" label="Select Theme" description="Please Select a Theme" >
+			    <option value="0">Default</option>
+			    <option value="1">White</option>
+			    <option value="2">Black and Skyblue</option>
+			    <option value="3">Gold and Black</option>
+			    <option value="4">Gray</option>
+			    <option value="5">Black</option>
+			    <option value="6">Pink</option>
+			    <option value="7">Light Pink</option>
+			    <option value="8">Digital</option>
+			    <option value="9">Red</option>
+			</field>	
+			
+            <field name="customcss" type="textarea" rows="10" cols="35" default="#jdvisitor { border: 1px solid #ccc; }" filter="safehtml" label="Custom Css" description="Please Enter Custom Css" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

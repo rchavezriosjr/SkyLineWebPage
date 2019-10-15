@@ -1,0 +1,26 @@
+[01-Mar-2017 22:44:11 America/Denver] PHP Notice:  Undefined variable: packageURL in /home4/suarezmu/public_html/skyline/administrator/components/com_joomlaupdate/models/default.php on line 287
+[08-Mar-2017 22:24:18 America/Denver] PHP Warning:  Creating default object from empty value in /home4/suarezmu/public_html/skyline/libraries/joomla/updater/update.php on line 267
+[09-Mar-2017 09:36:30 America/Denver] PHP Warning:  Creating default object from empty value in /home4/suarezmu/public_html/skyline/libraries/joomla/updater/update.php on line 267
+[29-Mar-2017 00:35:29 America/Denver] PHP Notice:  Undefined index: roksprocket.module.duplicate in /home4/suarezmu/public_html/skyline/libraries/rokcommon/RokCommon/Dispatcher.php on line 84
+[29-Mar-2017 00:35:29 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home4/suarezmu/public_html/skyline/libraries/rokcommon/RokCommon/Dispatcher.php on line 84
+[29-Mar-2017 01:18:46 America/Denver] PHP Notice:  Undefined index: roksprocket.module.duplicate in /home4/suarezmu/public_html/skyline/libraries/rokcommon/RokCommon/Dispatcher.php on line 84
+[29-Mar-2017 01:18:46 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home4/suarezmu/public_html/skyline/libraries/rokcommon/RokCommon/Dispatcher.php on line 84
+[29-Mar-2017 01:46:22 America/Denver] PHP Notice:  Undefined index: roksprocket.module.duplicate in /home4/suarezmu/public_html/skyline/libraries/rokcommon/RokCommon/Dispatcher.php on line 84
+[29-Mar-2017 01:46:22 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home4/suarezmu/public_html/skyline/libraries/rokcommon/RokCommon/Dispatcher.php on line 84
+[29-Mar-2017 02:29:15 America/Denver] PHP Notice:  Undefined index: roksprocket.module.duplicate in /home4/suarezmu/public_html/skyline/libraries/rokcommon/RokCommon/Dispatcher.php on line 84
+[29-Mar-2017 02:29:15 America/Denver] PHP Warning:  Invalid argument supplied for foreach() in /home4/suarezmu/public_html/skyline/libraries/rokcommon/RokCommon/Dispatcher.php on line 84
+[19-Apr-2017 16:40:57 America/Denver] PHP Warning:  Creating default object from empty value in /home4/suarezmu/public_html/skyline/libraries/joomla/updater/update.php on line 267
+[30-Apr-2017 21:46:37 America/Denver] PHP Warning:  Creating default object from empty value in /home4/suarezmu/public_html/skyline/libraries/joomla/updater/update.php on line 267
+[05-Jul-2017 06:55:08 America/Denver] PHP Warning:  Creating default object from empty value in /home4/suarezmu/public_html/skyline/libraries/joomla/updater/update.php on line 267
+[25-Jul-2017 12:44:28 America/Denver] PHP Warning:  Creating default object from empty value in /home4/suarezmu/public_html/skyline/libraries/joomla/updater/update.php on line 269
+[17-Aug-2017 14:08:23 America/Denver] PHP Warning:  Creating default object from empty value in /home4/suarezmu/public_html/skyline/libraries/joomla/updater/update.php on line 269
+[14-Dec-2017 08:43:29 America/Denver] PHP Warning:  Creating default object from empty value in /home4/suarezmu/public_html/skyline/libraries/src/Updater/Update.php on line 297
+[30-Jan-2018 21:05:50 America/Denver] PHP Warning:  Creating default object from empty value in /home4/suarezmu/public_html/skyline/libraries/src/Updater/Update.php on line 297
+[07-Feb-2018 07:16:31 America/Denver] PHP Warning:  Creating default object from empty value in /home4/suarezmu/public_html/skyline/libraries/src/Updater/Update.php on line 297
+[26-Jun-2018 22:18:41 America/Denver] PHP Warning:  Creating default object from empty value in /home4/suarezmu/public_html/skyline/libraries/src/Updater/Update.php on line 297
+[21-Aug-2018 17:12:04 America/Denver] PHP Warning:  Creating default object from empty value in /home4/suarezmu/public_html/skyline/libraries/src/Updater/Update.php on line 297
+[27-Nov-2018 22:12:53 America/Denver] PHP Warning:  Creating default object from empty value in /home4/suarezmu/public_html/skyline/libraries/src/Updater/Update.php on line 297
+[15-Jan-2019 17:52:27 America/Chicago] PHP Warning:  Creating default object from empty value in /home4/suarezmu/public_html/skyline/libraries/src/Updater/Update.php on line 297
+[15-Jan-2019 17:52:27 America/Chicago] PHP Warning:  Creating default object from empty value in /home4/suarezmu/public_html/skyline/libraries/src/Updater/Update.php on line 297
+[13-Mar-2019 14:23:34 UTC] PHP Warning:  Creating default object from empty value in /home4/suarezmu/public_html/skyline/libraries/src/Updater/Update.php on line 297
+[13-Mar-2019 14:23:34 UTC] PHP Warning:  Creating default object from empty value in /home4/suarezmu/public_html/skyline/libraries/src/Updater/Update.php on line 297
